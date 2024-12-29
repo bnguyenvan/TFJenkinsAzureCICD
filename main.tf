@@ -8,14 +8,27 @@ terraform {
     required_providers  {
         azurerm =   {
             source  =   "hashicorp/azurerm"
+            version = ">= 4.14.0"
+        }
+        azuread =   {
+            source  =   "hashicorp/azuread"
+            version =   ">= 3.0.2"
         }
     }
+    # ######################
+    # # BACKEND FOR .TFSTATE
+    # ######################
+    # backend "azurerm" {
+    #   resource_group_name  = "app-grp"
+    #   storage_account_name = "tfstatelab29nov25"
+    #   container_name       = "tfstate"
+    #   key                  = "terraform.tfstate"
+    # }
 }
 
 # Provider Block
 
 provider "azurerm" {
-    version         =   "~> 2.0"
     client_id       =   var.client_id
     client_secret   =   var.client_secret
     subscription_id =   var.subscription_id
@@ -28,7 +41,6 @@ provider "azurerm" {
 
 
 provider "azuread" {
-    version         =   ">= 0.11"
     client_id       =   var.client_id
     client_secret   =   var.client_secret
     tenant_id       =   var.tenant_id
