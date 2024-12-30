@@ -45,7 +45,7 @@ pipeline{
                         
                         sh """       
                         echo "Initialising Terraform"
-                        terraform init -migrate-state -force-copy -backend-config="access_key=$ARM_ACCESS_KEY"
+                        terraform init -migrate-state -force-copy -lock=false -backend-config="access_key=$ARM_ACCESS_KEY"
                         """
                            }
                     }
