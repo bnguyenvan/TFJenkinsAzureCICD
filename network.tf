@@ -1,3 +1,8 @@
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+#*             RESOURCES - Virtual Network               *#
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+
+
 resource "azurerm_virtual_network" "appnetwork" {
   name                = local.virtual_network.name
   location            = local.location

@@ -3,32 +3,17 @@
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 
 
-// output "resource-group-name" {
-//     description     =   "Print the name of the resource group"
-//     value           =   module.vnet.resource-group-name
-// }
+# output "app-vm-pip" {
+#   value = azurerm_public_ip.appwindowspubip.ip_address
+# }
 
-// output "resource-group-location" {
-//     description     =   "Print the location of the resource group"
-//     value           =   module.vnet.resource-group-location
-// }
+# output "client-vm-pip" {
+#   value = azurerm_public_ip.clientwindowspubip.ip_address
+# }
+# output "app-gw-publicIP" {
+#   value = azurerm_public_ip.appgwpubip.ip_address
+# }
 
-// output "virtual-network-name" {
-//     description     =   "Print the name of the virtual network"
-//     value           =   module.vnet.virtual-network-name
-// }
-
-// output "virtual-network-ip-range" {
-//     description     =   "Print the ip range of the virtual network"
-//     value           =   module.vnet.virtual-network-ip-range
-// }
-
-// output "subnet-name" {
-//     description     =   "Print the name of the subnet"
-//     value           =   module.vnet.subnet-name
-// }
-
-// output "subnet-ip-range" {
-//     description     =   "Print the ip range of the subnet"
-//     value           =   module.vnet.subnet-ip-range
-// }
+# output "app-gw-privateip" {
+#   value = azurerm_application_gateway.appgw.frontend_ip_configuration[1].private_ip_address
+# }
